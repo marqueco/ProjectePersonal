@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scriptPPMA.js"></script>
+<meta charset="ISO-8859-1">
+<title>Projecte Personal Final - Maria Arquer</title>
+</head>
+<body>
+
+<script> 
+var inputVector = [928, 527, 672, 828, 480, 615, 840, 536, 687, 0];
+var n = 3;
+var matriu1 = [[928,527,672],[828,480,615],[840,536,687]];
+var matriu2 = [[3,2,4],[1,7,9],[0,0,9]];
+var matriu3 = [[3311,5545,14503],[2964,5016,13167],[3056,5432,14367]];
+var matriu4 = [[0.36842105,-0.10526316,-0.05847953],[-0.05263158,0.15789474,-0.13450292],[0,0,0.11111111]];
+var matriu5 = [[927.9999854500002,527.0000105400001,672.0000130999999],[827.9999869200002,480.00000960000006,615.0000117299999],[839.9999862400002,536.0000107200001,687.00001225]];
+
+
+document.write(testID(inputVector));
+document.write("<br>" + "<br>" + "<br>");
+document.write("Hem ordenat la següent matriu (en endavant, 'matriu1') a partir del vector proporcionat:" + vectorToMatrix(inputVector));
+document.write("<br>" + "<br>");
+document.write("Per a fer la codificació, multipliquem 'matriu1' per la matriu de codificació proporcionada pel formador ('matriu2') i mostrem la matriu resultant (en endavant, matriu3): " + "<br>" + enCode(matriu1,matriu2,n));
+document.write("<br>" + "<br>");
+document.write("Tot seguit multipliquem 'matriu3' per la matriu de descodificació (en endavant, 'matriu4') i obtenim la següent matriu resultant que anomenarem 'matriu5':" + deCode(matriu3,matriu4,n))
+document.write("<br>" + "<br>");
+document.write("Si ho desitgem, podem convertir la matriu obtinguda en un vector: " + matrixToVector12(matriu5));
+document.write("<br>" + "<br>");
+document.write("A partir de la mateixa matriu, arrodonim els valors decimals i convertim els caràcters ASCII per tal de poder llegir el missatge secret, que és el següent: " + missatgeSecret(matriu5))
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
